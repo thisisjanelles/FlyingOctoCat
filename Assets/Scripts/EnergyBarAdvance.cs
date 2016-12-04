@@ -19,6 +19,24 @@ public class EnergyBarAdvance : MonoBehaviour {
         _energyBar.fillAmount += 0.0010f;
      }
 
+    public int getMode()     {
+        int mode = 0;
+            if (_energyBar.fillAmount > 0.999f)
+            {
+            mode = 3;
+                      }
+            else if (_energyBar.fillAmount > 0.666f)
+            {
+            mode = 2;
+            }
+            else if (_energyBar.fillAmount > 0.333f)
+            {
+               mode = 1;
+            }
+        return mode;
+        
+    }
+
     
     public void shrink()
     {

@@ -16,5 +16,7 @@ public class OctoCatControl : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Mouse0)) {
 			_rigidBody.velocity = Vector2.up * 4;
 		}
+
+       
 	}
 }

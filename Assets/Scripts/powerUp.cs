@@ -16,6 +16,7 @@ public class powerUp : MonoBehaviour {
 
     void TaskOnClick()
     {
+        enBar.getMode();
          enBar.shrink();
     }
 }
