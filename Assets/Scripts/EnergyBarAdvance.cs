@@ -16,7 +16,7 @@ public class EnergyBarAdvance : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        _energyBar.fillAmount += 0.0001f;
+        _energyBar.fillAmount += 0.0010f;
      }
 
     
