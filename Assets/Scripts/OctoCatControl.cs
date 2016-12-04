@@ -14,9 +14,9 @@ public class OctoCatControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Mouse0)) {
-			_rigidBody.velocity = Vector2.up * 4;
+			_rigidBody.velocity = Vector2.up * 4 + Vector2.right * 0.5f;
 		}
 
-       
+        
 	}
 }
