@@ -10,27 +10,24 @@ public class EnergyBarAdvance : MonoBehaviour {
     void Start()
     {
         _energyBar = GetComponent<Image>();
+        _energyBar.fillAmount = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        _energyBar.fillAmount = Time.time * 0.05f;
+        _energyBar.fillAmount += 0.0001f;
      }
 
-    float getFillAmount()
+    
+    public void shrink()
     {
-        return _energyBar.fillAmount;
-    }
-
-    void shrink()
-    {
-        if (_energyBar.fillAmount > 1/3) {
-            _energyBar.fillAmount -= 1 / 3;
-        } else if (_energyBar.fillAmount > 2 / 3) {
-            _energyBar.fillAmount -= 2 / 3;
-        } else if (_energyBar.fillAmount > 0.999f) {
+        if (_energyBar.fillAmount > 0.999f) {
             _energyBar.fillAmount = 0;
+        } else if (_energyBar.fillAmount > 0.666f) {
+            _energyBar.fillAmount -= 0.666f;
+        } else if (_energyBar.fillAmount > 0.333f) {
+            _energyBar.fillAmount -= 0.333f;
         }
     }
 }
